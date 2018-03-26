@@ -312,7 +312,7 @@ class Validator(object):
         if 'coerce' in definition:
             value = self._validate_coerce(definition['coerce'], field,
                                           value)
-            self.document[field] = value
+            self.current[field] = value
 
         if 'readonly' in definition:
             self._validate_readonly(definition['readonly'], field,
